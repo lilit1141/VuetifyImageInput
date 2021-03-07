@@ -4,7 +4,7 @@ export default function(h, {
 	props,
 }) {
 	return h(
-		'VBtn',
+		'sui-button',
 		{
 			class: 'ma-1',
 			props: {
@@ -15,9 +15,13 @@ export default function(h, {
 			on: listeners,
 		},
 		[h(
-			'VIcon',
+			'sui-icon',
 			{
 				style: props.iconStyle,
+				class: `icon ${props.icon}`,
+				props: {
+					name: props.icon,
+				},
 			},
 			props.icon,
 		)],

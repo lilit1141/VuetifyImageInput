@@ -34,7 +34,7 @@ export default function(h, {
 					progress,
 				}) => {
 					return h(
-						'VCard',
+						'div',
 						{
 							style: {
 								alignItems: 'center',
@@ -45,7 +45,6 @@ export default function(h, {
 							},
 							props: {
 								disabled,
-								outlined: true,
 							},
 							on,
 						},
@@ -60,15 +59,10 @@ export default function(h, {
 									indeterminate = true;
 								}
 								return h(
-									'VProgressCircular',
+									'sui-icon',
 									{
 										props: {
-											color: 'primary',
-											indeterminate,
-											rotate: -90,
-											size: 64,
-											value,
-											width: 4,
+											name: 'progress-circular',
 										},
 									},
 									text,
@@ -94,13 +88,13 @@ export default function(h, {
 								text = uploadIcon;
 							}
 							return h(
-								'VIcon',
+								'sui-icon',
 								{
 									style,
+									class: `icon ${text}`,
 									props: {
-										color,
 										disabled,
-										large: true,
+										name: text,
 									},
 								},
 								text,

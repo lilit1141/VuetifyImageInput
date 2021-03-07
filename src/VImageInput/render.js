@@ -29,7 +29,7 @@ export default function(h) {
 						{
 							style: {
 								alignItems: 'center',
-								background: this.checkeredBackground,
+								background: '#454545',
 								display: 'flex',
 								height: '100%',
 								justifyContent: 'center',
@@ -168,7 +168,6 @@ export default function(h) {
 					...(this.clearable
 						? [
 							h('MyClearButton'),
-							h('VSpacer'),
 						]
 						: []
 					),

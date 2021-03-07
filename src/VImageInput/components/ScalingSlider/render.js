@@ -1,3 +1,5 @@
+import RangeSlider from 'vue-range-slider'
+
 export default function(h, {parent}) {
 	let {
 		computedMaxScaling,
@@ -6,8 +8,9 @@ export default function(h, {parent}) {
 		scaleTo,
 		scaling,
 	} = parent;
+
 	return h(
-		'VSlider',
+		RangeSlider,
 		{
 			class: 'ma-1',
 			props: {
@@ -15,12 +18,12 @@ export default function(h, {parent}) {
 				hideDetails: true,
 				max: computedMaxScaling,
 				min: computedMinScaling,
-				step: 1 / 1000,
+				step: 0.1,
 				value: scaling,
 			},
 			on: {
-				input: scaleTo,
-			},
+				change: scaleTo,
+			}
 		},
 	);
 }

@@ -1,4 +1,3 @@
-import checkeredBackground from './checkeredBackground';
 import computedMaxCroppingLeft from './computedMaxCroppingLeft';
 import computedMaxCroppingTop from './computedMaxCroppingTop';
 import computedMaxScaling from './computedMaxScaling';
@@ -19,7 +18,6 @@ import scaling from './scaling';
 import updateImageData from './updateImageData';
 
 export default {
-	checkeredBackground,
 	computedMaxCroppingLeft,
 	computedMaxCroppingTop,
 	computedMaxScaling,
