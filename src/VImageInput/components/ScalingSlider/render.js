@@ -1,4 +1,4 @@
-import RangeSlider from 'vue-range-slider'
+import RangeSlider from 'vue-range-slider';
 
 export default function(h, {parent}) {
 	let {
